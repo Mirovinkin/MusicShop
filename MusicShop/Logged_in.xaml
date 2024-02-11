@@ -1,0 +1,48 @@
+﻿<Window x:Class="MusicShop.Logged_in"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicShop"
+        mc:Ignorable="d"
+        Title="Logged_in" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="Списки" Margin="10,0,10,0">
+                <MenuItem Header="Новинки"/>
+                <MenuItem Header="Самые популярные авторы">
+                    <MenuItem Header="За день"/>
+                    <MenuItem Header="За неделю"/>
+                    <MenuItem Header="За месяц"/>
+                </MenuItem>
+                <MenuItem Header="Самые продаваемые пластинки">
+                    <MenuItem Header="За день"/>
+                    <MenuItem Header="За неделю"/>
+                    <MenuItem Header="За месяц"/>
+                </MenuItem>
+                <MenuItem Header="Самые продаваемы пластинки">
+                    <MenuItem Header="За день"/>
+                    <MenuItem Header="За неделю"/>
+                    <MenuItem Header="За месяц"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Поиск дисков" Margin="0,0,10,0">
+                <MenuItem Header="По названия"/>
+                <MenuItem Header="По исполнителю"/>
+                <MenuItem Header="По жанру"/>
+            </MenuItem>
+            <MenuItem Header="Вывести" Margin="0,0,10,0">
+                <MenuItem Header="Все пластинки"/>
+                <MenuItem Header="Всех авторов"/>
+                <MenuItem Header="Все жанры"/>
+            </MenuItem>
+            <MenuItem Header="Редактировать данные" Margin="0,0,10,0" Click="Edit_Data_Button"/>
+        </Menu>
+        <DataGrid Grid.Row="1" ItemsSource="{Binding DataLoad}" />
+
+    </Grid>
+</Window>
